@@ -1,0 +1,26 @@
+
+import random
+from sty import fg
+
+
+def generateRGB():
+    red = random.randint(0, 256)
+    green = random.randint(0, 256)
+    blue = random.randint(0, 256)
+    return red, green, blue
+
+def generateColor(red, green, blue):
+    return fg(red, green, blue)
+
+# enter a name and it will generate a random color 
+
+red, green, blue = generateRGB()
+color = generateColor(red, green, blue)
+
+name = input("Enter your name to test the color generator !")
+
+print(color,f"Hello {name} i am randomly changing colors :)")
+
+
+
+
